@@ -1,4 +1,5 @@
 #include "binary_trees.h"
+
 /**
  * binary_tree_insert_left: ...
  * @parent: ...
@@ -9,7 +10,7 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 {
     if (parent == NULL)
     {
-        return (NULL); // Cannot insert into a NULL parent
+        return (NULL);
     }
     binary_tree_t *newnode = malloc(sizeof(binary_tree_t));
     if (newnode == NULL)
