@@ -1,4 +1,4 @@
-#include"binary_trees.h"
+#include "binary_trees.h"
 
 /**
  * binary_trees_ancestor - ...
@@ -11,7 +11,8 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tr
     const binary_tree_t *af, *as;
     if (first == NULL || second == NULL) return (NULL);
     if (first == second) return (first);
-    af, as = first, second;
+    af = first;
+    as = second;
     while (as != af){
         if (af == NULL) af = second;
         else af = first->parent;
