@@ -12,11 +12,11 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tr
     if (first == NULL || second == NULL) return (NULL);
     if (first == second) return (first);
     af, as = first, second;
-    while (first != NULL){
-        while(second != NULL){
-            if (af == as) return (as);
-            as = second->parent;
-        }
-        af = first->parent;
+    while (as != af){
+        if (af == NULL) af = second;
+        else af = first->parent;
+        if (as == NULL) as = first;
+        else as = second->parent;
     }
+    return (af);
 }
